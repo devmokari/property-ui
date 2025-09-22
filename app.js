@@ -24,6 +24,7 @@ async function fetchSuggestions(query) {
     const data = await apiCall("autocomplete", { text: query });
     if (data.suggestions) {
       const unique = [...new Set(data.suggestions)];
+      box.innerHTML = "";
       unique.forEach((s) => {
         const div = document.createElement("div");
         div.textContent = s;
