@@ -45,6 +45,7 @@ async function fetchSuggestions(query) {
 async function getEstimate() {
     const address = document.getElementById("addressInput").value.trim();
     if (!address) return alert("Please enter an address");
+    setLoading(true);
   
     try {
       const data = await apiCall("getProperty", { address });
@@ -116,8 +117,22 @@ async function getEstimate() {
     } catch (err) {
       alert("Error: " + err.message);
       console.error(err);
+    } finally {
+        setLoading(false);
     }
   }
+
+  function setLoading(isLoading) {
+    const btn = document.getElementById("searchBtn");
+    if (isLoading) {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    }
+  }
+  
   
 
 function toggleRaw() {
