@@ -31,7 +31,7 @@ async function getEstimate() {
   if (!address) return alert("Please enter an address");
 
   try {
-    const res = await fetch(`${API_URL}/property`, {
+    const res = await fetch(`${API_URL}/getProperty`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address }),
