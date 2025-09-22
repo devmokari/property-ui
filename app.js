@@ -7,7 +7,11 @@ async function fetchSuggestions(query) {
   if (query.length < 3) return;
 
   try {
-    const res = await fetch(`${API_URL}/autocomplete?text=${encodeURIComponent(query)}`);
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "autocomplete", text: query }),
+    });
     const data = await res.json();
 
     if (data.suggestions) {
@@ -31,10 +35,10 @@ async function getEstimate() {
   if (!address) return alert("Please enter an address");
 
   try {
-    const res = await fetch(`${API_URL}/getProperty`, {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ address }),
+      body: JSON.stringify({ action: "getProperty", address }),
     });
     const data = await res.json();
 
