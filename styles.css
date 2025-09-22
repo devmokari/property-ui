@@ -31,6 +31,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    position: relative; /* 👈 anchor for suggestions */
   }
   .input-wrapper {
     display: flex;
@@ -63,6 +64,9 @@ body {
   /* Suggestions dropdown */
   #suggestions {
     position: absolute;
+    top: 100%; /* 👈 dropdown appears below input */
+    left: 0;
+    right: 0;
     width: 100%;
     max-width: 600px;
     margin-top: 5px;
