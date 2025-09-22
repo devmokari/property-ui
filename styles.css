@@ -2,25 +2,114 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background: #f9f9f9;
+    color: #333;
+    text-align: center;
   }
-  .input-container {
+  
+  /* Hero section */
+  .hero {
+    background: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80")
+      no-repeat center center/cover;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  .hero p {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  /* Input + button */
+  .input-container,
+  .search-container {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
   }
+  .input-wrapper {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    overflow: hidden;
+    background: white;
+    max-width: 600px;
+    width: 100%;
+  }
+  .input-wrapper input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+  }
+  .input-wrapper button {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  .input-wrapper button:hover {
+    background: #0056b3;
+  }
+  
+  /* Suggestions dropdown */
+  #suggestions {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5px;
+    text-align: left;
+    z-index: 10;
+  }
   #suggestions div {
     background: #fff;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     border: 1px solid #ddd;
   }
   #suggestions div:hover {
     background: #eee;
   }
+  
+  /* Property card */
   .property-card {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  .property-card h2 {
+    margin-top: 0;
+  }
+  .property-details div {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .property-details i {
+    color: #007bff;
+  }
+  
+  /* Raw JSON */
+  .raw-box {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  .raw-box h3 {
+    cursor: pointer;
+    color: #007bff;
   }
   

@@ -11,22 +11,30 @@
     />
   </head>
   <body>
-    <h1>🏡 Property Finder</h1>
+    <!-- Hero section with background image -->
+    <header class="hero">
+      <h1>🏡 Property Finder</h1>
+      <p>Find property details in seconds</p>
+    </header>
 
-    <div class="input-container">
-      <input
-        type="text"
-        id="addressInput"
-        placeholder="Enter property address"
-        autocomplete="off"
-        oninput="fetchSuggestions(this.value)"
-      />
-      <button id="searchBtn" onclick="getEstimate()">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <div id="suggestions"></div>
+    <!-- Search box -->
+    <div class="search-container">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="addressInput"
+          placeholder="Enter property address"
+          autocomplete="off"
+          oninput="fetchSuggestions(this.value)"
+        />
+        <button id="searchBtn" onclick="getEstimate()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div id="suggestions" class="suggestions"></div>
     </div>
 
+    <!-- Results -->
     <div id="output" class="result" style="display: none">
       <div class="property-card">
         <h2 id="propertyTitle"></h2>
