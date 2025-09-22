@@ -1,5 +1,5 @@
 // Change this to your deployed API base URL
-const API_URL = "https://your-property-api.com";
+const API_URL = "https://g7eku3ruwr6e2hduscxavmi6zy0wsiel.lambda-url.ap-southeast-2.on.aws/";
 
 async function fetchSuggestions(query) {
   const box = document.getElementById("suggestions");
