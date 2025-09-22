@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+h1 { text-align: center; }
+.input-container { display: flex; gap: 10px; margin-bottom: 20px; justify-content: center; }
+input { flex: 1; padding: 10px; font-size: 16px; }
+button { padding: 10px 15px; font-size: 16px; cursor: pointer; }
+.suggestions { margin: 10px 0; }
+.suggestions button { display: block; width: 100%; text-align: left; padding: 5px; background: #fff; border: 1px solid #ddd; margin-bottom: 5px; }
+.property-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; }
+.image-gallery { display: flex; gap: 10px; flex-wrap: wrap; }
+.property-img { max-width: 150px; border-radius: 4px; }
+.detail-box { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.raw-box { margin-top: 20px; background: #eee; padding: 10px; border-radius: 4px; }
