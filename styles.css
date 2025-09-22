@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+  }
+  .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #suggestions div {
+    background: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  #suggestions div:hover {
+    background: #eee;
+  }
+  .property-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏡 Property Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1>🏡 Property Finder</h1>
+
+    <div class="input-container">
+      <input
+        type="text"
+        id="addressInput"
+        placeholder="Enter property address"
+        autocomplete="off"
+        oninput="fetchSuggestions(this.value)"
+      />
+      <button id="searchBtn" onclick="getEstimate()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <div id="suggestions"></div>
+    </div>
+
+    <div id="output" class="result" style="display: none">
+      <div class="property-card">
+        <h2 id="propertyTitle"></h2>
+        <div class="property-details" id="propertyDetails"></div>
+      </div>
+
+      <div class="raw-box">
+        <h3 onclick="toggleRaw()">📝 Raw Response (click to toggle)</h3>
+        <pre id="rawResponse" style="display: none"></pre>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
